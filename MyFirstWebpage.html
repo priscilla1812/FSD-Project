@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduWave - Learn Anywhere</title>
+  <style>
+    /* Clean, minimal styling to keep the layout readable */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #f1f5f9;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .hero button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .cards {
+      display: flex;
+      gap: 1.5rem;
+    }
+    article {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 1rem;
+      border-radius: 6px;
+      flex: 1;
+    }
+    footer {
+      background: #1e293b;
+      color: #94a3b8;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header & Navigation -->
+  <header>
+    <h2>LearnPulse</h2>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#instructors">Mentors</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. Hero Section -->
+    <section id="hero" class="hero">
+      <h1>Master New Skills at Your Own Pace</h1>
+      <p>Accessible, hands-on courses in programming, AI, and design.</p>
+      <button>Explore Courses</button>
+    </section>
+
+    <!-- 3. Content Section 1: Featured Courses (uses <article>) -->
+    <section id="courses">
+      <h2>Featured Courses</h2>
+      <div class="cards">
+        <article>
+          <h3>Python for Beginners</h3>
+          <p>Learn core syntax, logic building, and write your first automation scripts.</p>
+        </article>
+        <article>
+          <h3>Intro to Web Development</h3>
+          <p>Build responsive websites from scratch using HTML5, CSS3, and JavaScript.</p>
+        </article>
+        <article>
+          <h3>Machine Learning Basics</h3>
+          <p>Understand data preprocessing, predictive modeling, and scikit-learn.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Content Section 2: Why Choose Us -->
+    <section id="about">
+      <h2>Why Learn With Us?</h2>
+      <article>
+        <p>LearnPulse bridges the gap between theory and industry application with project-based learning, interactive code sandboxes, and personalized mentor reviews on every milestone.</p>
+      </article>
+    </section>
+
+    <!-- 5. Content Section 3: Meet the Mentors -->
+    <section id="instructors">
+      <h2>Top Mentors</h2>
+      <div class="cards">
+        <article>
+          <h3>Sarah Jenkins</h3>
+          <p>Senior Full-Stack Engineer with 8+ years of industry experience.</p>
+        </article>
+        <article>
+          <h3>Dr. Alex Rao</h3>
+          <p>AI Researcher passionate about demystifying ML fundamentals.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Footer -->
+  <footer>
+    <p>&copy; 2026 LearnPulse Platform. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
