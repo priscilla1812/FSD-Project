@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediClarity AI - Pharmacovigilance & Drug Interaction Forecaster</title>
+
+  <!-- Tailwind CSS CDN with Typography Plugin enabled -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- 1. Header & Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-teal-400 flex items-center justify-center text-white shadow-sm">
+          <i class="fas fa-shield-halved text-lg"></i>
+        </span>
+        <span class="text-xl font-bold text-slate-900 tracking-tight">Medi<span class="text-brand-600">Clarity</span></span>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+        <a href="#features" class="hover:text-brand-600 transition-colors">Features</a>
+        <a href="#interactive-demo" class="hover:text-brand-600 transition-colors">Scanner Demo</a>
+        <a href="#workflow" class="hover:text-brand-600 transition-colors">How It Works</a>
+      </div>
+
+      <div>
+        <a href="#interactive-demo" class="px-4 py-2 text-sm font-semibold text-white bg-brand-700 hover:bg-brand-800 rounded-lg shadow-sm transition">
+          Launch Checker
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2. Main Content -->
+  <main>
+    <!-- Hero Section using Tailwind Typography (prose) -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-brand-50/60 to-transparent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Typography Container -->
+        <div class="prose prose-slate max-w-none">
+          <div class="not-prose inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wider mb-6">
+            <i class="fas fa-sparkles"></i> AI-Assisted Pharmacovigilance
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight mb-4">
+            Prevent Adverse Drug Interactions <span class="text-brand-700">Before They Occur</span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Upload prescription labels or type medicine names to instantly cross-analyze contraindications, predict clinical severity, and generate safe dosage intervals.
+          </p>
+          <div class="not-prose flex flex-col sm:flex-row gap-4 mt-8">
+            <a href="#interactive-demo" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-brand-700 hover:bg-brand-800 shadow-md transition no-underline">
+              <i class="fas fa-camera"></i> Try Prescription Scan
+            </a>
+            <a href="#features" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition no-underline">
+              Explore Model Specs
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80" alt="Medicine bottles and clinical checking" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4">
+            <span class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xl">
+              <i class="fas fa-triangle-exclamation"></i>
+            </span>
+            <div>
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Detection Engine</p>
+              <p class="text-sm font-extrabold text-slate-800">Multi-Drug Conflict Flagging</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Prescription Scanner Demo -->
+    <section id="interactive-demo" class="py-16 bg-white border-y border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+          <!-- Medical Safety Disclaimer Banner -->
+          <div class="mb-6 p-4 rounded-xl bg-amber-50 border border-amber-200 flex items-start gap-3.5 text-amber-900 shadow-sm" role="alert">
+            <i class="fas fa-triangle-exclamation text-amber-600 text-lg mt-0.5 flex-shrink-0"></i>
+            <div class="text-xs sm:text-sm leading-relaxed">
+              <strong class="font-bold">Medical Disclaimer:</strong> MediClarity AI is an educational and clinical decision-support tool, not a substitute for professional medical judgment. <strong>Consume or modify prescription medications only under the direct supervision and advice of a licensed physician or certified healthcare provider.</strong> Never alter dosages based solely on algorithmic predictions.
+            </div>
+          </div>
+
+          <div class="text-center mb-10 prose prose-slate mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-1">Interactive Clinical Sandbox</h2>
+            <p class="text-slate-600 text-sm mt-0">Select prescription intake method and test the real-time interaction forecaster.</p>
+          </div>
+          
+          <!-- OCR Upload Simulation -->
+          <div class="mb-6">
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Prescription OCR Scanner</label>
+            <div class="border-2 border-dashed border-slate-300 rounded-xl p-6 text-center hover:border-brand-500 transition cursor-pointer bg-white" onclick="simulateOCR()">
+              <i class="fas fa-cloud-arrow-up text-3xl text-brand-600 mb-2"></i>
+              <p class="text-sm font-semibold text-slate-700">Click to simulate prescription upload (OCR Extraction)</p>
+              <p class="text-xs text-slate-500 mt-1">Parses text labels using Computer Vision / Tesseract</p>
+            </div>
+          </div>
+
+          <!-- Medication Input Field -->
+          <div class="mb-4">
+            <label for="drugList" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Active Prescriptions (Comma-separated)</label>
+            <input type="text" id="drugList" value="Aspirin, Warfarin" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-sm" placeholder="e.g., Metformin, Lisinopril">
+          </div>
+
+          <button onclick="runForecaster()" class="w-full py-3 bg-brand-700 hover:bg-brand-800 text-white font-semibold rounded-lg shadow transition flex items-center justify-center gap-2 text-sm">
+            <i class="fas fa-calculator"></i> Run Pharmacovigilance Analysis
+          </button>
+
+          <!-- Interactive Results Card styled with Tailwind Typography -->
+          <div id="resultsCard" class="mt-6 hidden bg-white rounded-xl border border-red-200 p-6 shadow-sm prose prose-sm prose-slate max-w-none">
+            <div class="not-prose flex items-center justify-between border-b border-slate-100 pb-3 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">
+                <i class="fas fa-circle-exclamation"></i> High Risk: Severe Contraindication
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Confidence: 96.4%</span>
+            </div>
+            <p><strong>Detected Interaction:</strong> Aspirin (NSAID) + Warfarin (Anticoagulant)</p>
+            <p><strong>Clinical Mechanism:</strong> Co-administration exponentially elevates systemic hemorrhage risk through synergistic platelet inhibition and antithrombin actions.</p>
+            <p><strong>Safe Dosage Interval:</strong> <span class="text-emerald-700 font-semibold">Separate dosing schedules completely; alternate therapies under clinical supervision.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section (Responsive Grid) -->
+    <section id="features" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 prose prose-slate">
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Comprehensive Core Capabilities</h2>
+          <p class="text-slate-600 text-base mt-0">Designed for clinical cross-checking, outpatient safety, and personal medication logs.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <article class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+            <span class="w-12 h-12 rounded-lg bg-teal-50 text-brand-700 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-dna"></i>
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Drug Interaction Classifier</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Detects adverse combinations across complex polypharmacy regimens using trained multi-label biomedical machine learning models.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+            <span class="w-12 h-12 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-gauge-high"></i>
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Severity Level Prediction</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Categorizes risks into Minor, Moderate, and High-Risk Contraindicated tiers to help prioritize pharmacist triage decisions.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+            <span class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-camera-retro"></i>
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Prescription OCR Scanner</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Extracts active ingredient salt names directly from printed prescription images or box labels via Optical Character Recognition.
+            </p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+            <span class="w-12 h-12 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-clock-rotate-left"></i>
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Safe Timing Interval Planner</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Calculates metabolic half-life intervals and schedules morning, afternoon, or evening offsets to reduce absorption inhibition.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Workflow Section -->
+    <section id="workflow" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 prose prose-slate mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-1">How the Architecture Works</h2>
+          <p class="text-slate-600 text-sm mt-0">End-to-end full-stack data pipeline from input to inference.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div class="p-4">
+            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 font-bold mx-auto flex items-center justify-center mb-3">1</div>
+            <h4 class="font-bold text-sm text-slate-800">Prescription Input</h4>
+            <p class="text-xs text-slate-500 mt-1">OCR image upload or manual multi-drug text entry.</p>
+          </div>
+          <div class="p-4">
+            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 font-bold mx-auto flex items-center justify-center mb-3">2</div>
+            <h4 class="font-bold text-sm text-slate-800">Entity Parsing</h4>
+            <p class="text-xs text-slate-500 mt-1">Backend normalizes salts and extracts chemical entities.</p>
+          </div>
+          <div class="p-4">
+            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 font-bold mx-auto flex items-center justify-center mb-3">3</div>
+            <h4 class="font-bold text-sm text-slate-800">ML Classification</h4>
+            <p class="text-xs text-slate-500 mt-1">Predicts severity risk score and contraindications.</p>
+          </div>
+          <div class="p-4">
+            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 font-bold mx-auto flex items-center justify-center mb-3">4</div>
+            <h4 class="font-bold text-sm text-slate-800">Safe Dosage Plan</h4>
+            <p class="text-xs text-slate-500 mt-1">Outputs plain-language warnings & spacing schedule.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 3. Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-10 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 MediClarity AI Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    function simulateOCR() {
+      const input = document.getElementById('drugList');
+      input.value = "Levothyroxine, Calcium Carbonate";
+      alert("OCR Simulation: Successfully parsed 'Levothyroxine' and 'Calcium Carbonate' from scanned label.");
+    }
+
+    function runForecaster() {
+      const results = document.getElementById('resultsCard');
+      results.classList.remove('hidden');
+      results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+
+</body>
+</html>
